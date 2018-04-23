@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>订单结算页 -易购商城</title>
+    <title>订单结算页</title>
 	<!--结算页面样式-->	
 	<link rel="stylesheet" type="text/css" href="/css/base.css" media="all" />
     <link type="text/css" rel="stylesheet"  href="/css/order-commons.css" source="widget"/>	
@@ -40,8 +40,8 @@
 			<input type="hidden" name="orderItems[${status.index}].picPath" value="${cart.images[0]}"/>
 		</c:forEach>
 		<input type="hidden" name="payment" value="<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${totalPrice/100 }"/>"/>
-		<input type="hidden" name="orderShipping.receiverName" value="入云龙"/>
-		<input type="hidden" name="orderShipping.receiverMobile" value="15891588888"/>
+		<input type="hidden" name="orderShipping.receiverName" value="蜡笔小新"/>
+		<input type="hidden" name="orderShipping.receiverMobile" value="15701543203"/>
 		<input type="hidden" name="orderShipping.receiverState" value="北京"/>
 		<input type="hidden" name="orderShipping.receiverCity" value="北京"/>
 		<input type="hidden" name="orderShipping.receiverDistrict" value="昌平区"/>

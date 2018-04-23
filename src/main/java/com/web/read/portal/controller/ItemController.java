@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.web.read.portal.bean.ItemInfo;
 import com.web.read.portal.bean.TbItem;
-import com.web.read.portal.servcie.ItemService;
+import com.web.read.portal.service.ItemService;
 
 @Controller
 public class ItemController {
@@ -18,10 +18,9 @@ public class ItemController {
 	@Autowired
 	private ItemService itemService;
 
-		
 	@RequestMapping("/item/{itemId}")
 	public String showItem(@PathVariable Long itemId, Model model) {
-		System.out.println("read-portal>ItemServiceImpl>getItemById>itemId>>>>"+itemId);
+		System.out.println("portal-8082<<ItemController>>显示商品信息 [" + itemId+"]");
 		TbItem item = itemService.getItemById(itemId);
 		ItemInfo info = new ItemInfo();
 		if (item != null) {
@@ -40,11 +39,13 @@ public class ItemController {
 		model.addAttribute("item", info);
 		return "item";
 	}
-	
-	
+
 	@RequestMapping(value = "/item/desc/{itemId}", produces = MediaType.TEXT_HTML_VALUE + ";charset=utf-8")
 	@ResponseBody
 	public String getItemDesc(@PathVariable Long itemId) {
+		
+		System.out.println("portal-8082<<ItemController>>显示商品描述信息 [" + itemId+"]");
+		
 		String string = itemService.getItemDescById(itemId);
 		return string;
 	}
@@ -52,6 +53,9 @@ public class ItemController {
 	@RequestMapping(value = "/item/param/{itemId}", produces = MediaType.TEXT_HTML_VALUE + ";charset=utf-8")
 	@ResponseBody
 	public String getItemParam(@PathVariable Long itemId) {
+		
+		System.out.println("portal-8082<<ItemController>>显示商品参数信息 [" + itemId+"]");
+		
 		String string = itemService.getItemParamById(itemId);
 		return string;
 	}

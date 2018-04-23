@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.web.read.portal.bean.SearchResult;
-import com.web.read.portal.servcie.SearchService;
+import com.web.read.portal.service.SearchService;
 
 @Controller
 public class SearchController {

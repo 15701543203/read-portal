@@ -15,4 +15,15 @@
 		<property name="prefix" value="/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 配置要拦截的路径 -->
+			<mvc:mapping path="/order/**"/>
+			<!-- 配置不拦截的路径 -->
+<!-- 			<mvc:exclude-mapping path=""/> -->
+			<bean class="com.web.read.portal.interceptor.LoginInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
 </beans>

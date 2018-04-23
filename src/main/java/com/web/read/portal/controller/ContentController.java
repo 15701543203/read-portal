@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.web.read.portal.servcie.ContentService;
+import com.web.read.portal.service.ContentService;
 
 @Controller
 public class ContentController {

@@ -13,7 +13,7 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <link rel="stylesheet" href="/css/base.css">
    <link href="/css/purchase.2012.css?v=201410141639" rel="stylesheet" type="text/css">
-   <title>我的购物车 - </title>
+   <title>我的购物车 - 易购商城</title>
    <script>
    	var pageConfig  = {};
    </script>
